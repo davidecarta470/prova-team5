@@ -80,21 +80,27 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                    Inserito Qualcosa
-                </div>
+                
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Titolo</th>
+                    <th scope="col">Content</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach ($posts as $post)
+                  <tr>
+                    <th scope="row">{{$post->id}}</th>
+                    <td>{{$post->title}}</td>
+                    <td>{{$post->content}}</td>
+                  </tr>
+                  @endforeach
+                  
+                </tbody>
+              </table>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
             </div>
         </div>
     </body>
