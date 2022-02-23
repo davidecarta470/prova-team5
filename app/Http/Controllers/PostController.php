@@ -12,3 +12,4 @@ class PostController extends Controller
       return view('welcome', compact('posts'));
     }
 }
+//prova
